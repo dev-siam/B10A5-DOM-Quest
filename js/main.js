@@ -1,3 +1,7 @@
+const donateBtnNoakhali = document.getElementById("donateBtnNoakhali");
+const donateBtnFeni = document.getElementById("donateBtnFeni");
+const donateBtnMovement = document.getElementById("donateBtnMovement");
+
 
 // donateBtnNoakhali by passing ID as parameter
 donateBtnNoakhali.addEventListener("click", () =>
@@ -21,13 +25,13 @@ const donationBtn = document.getElementById("donationBtn");
 const historyBtn = document.getElementById("historyBtn");
 
 donationBtn.addEventListener("click", () => {
-  console.log("donationBtn clicked");
   toggleElements('donation', 'history');
+  toggleBtnColor("donationBtn", "historyBtn");
 });
 
 historyBtn.addEventListener("click", () => {
-  console.log("historyBtn clicked");
   toggleElements('history', 'donation');
+  toggleBtnColor("historyBtn", "donationBtn");
 });
 
 

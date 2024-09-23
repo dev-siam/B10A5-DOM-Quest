@@ -11,7 +11,7 @@ function createHistory(donationAmount, donationAmountID) {
   const historyDiv = document.createElement("div");
   historyDiv.innerHTML = `
     <div class="p-6 grid gap-2 border rounded-2xl">
-      <h2 class="text-md font-bold">${donationAmount} Taka is Donated for <span class="text-primary-text bg-lime-300 rounded-lg"> ${donatioName} </span></h2>
+      <h2 class="text-md font-bold">${donationAmount} Taka is Donated for <span class="text-primary-text bg-lime-100 rounded-lg"> ${donatioName} </span></h2>
       </h2>
       <p class="text-secondary-text">Date: ${donationTime}</p>
     </div>
@@ -49,6 +49,7 @@ function donateNow(currentBalanceID, donationAmountID, myBalanceID) {
 
 
 
+
 // Commmon FUnction for Toggleing donation and history
 function toggleElements(showElementID, hideElementID) {
   const showElement = document.getElementById(showElementID);
@@ -56,5 +57,14 @@ function toggleElements(showElementID, hideElementID) {
 
   showElement.classList.remove("hidden");
   hideElement.classList.add("hidden");
+}
+
+// Commmon FUnction for Toggleing Btn Color
+function toggleBtnColor(showElementID, hideElementID) {
+  const showElement = document.getElementById(showElementID);
+  const hideElement = document.getElementById(hideElementID);
+
+  showElement.classList.add("bg-btn-color");
+  hideElement.classList.remove("bg-btn-color");
   
 }
