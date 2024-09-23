@@ -45,8 +45,8 @@
   </head>
 <body class="font-lexend text-primary-text">
     <!-- Header Section  -->
-    <header class="sticky top-0   backdrop-blur-lg ">
-        <section class="bg-primary-bg px-4 ">
+    <header class="sticky top-0   backdrop-blur-lg scroll-opacity-25">
+        <section class="bg-primary-bg scroll-opacity-25  px-4 ">
             <div class="container mx-auto max-w-[1140px]">
             <div class="flex  gap-3 justify-between py-6 pb-10 ">
                 <button class="text-xl font-semibold px-8 py-3 bg-btn-color rounded-lg">Blog</button>
@@ -56,21 +56,23 @@
                 </div>
                 <div class="flex gap-4 justify-center items-center">
                     <img src="./assets/coin.png" class="h-7 w-7" alt="Coin">
-                    <h2 class="text-xl"><span>5500</span> BDT</h2>
+                    <h2 class="text-xl font-semibold"><span id="myBalance">5500</span> BDT</h2>
                 </div>
             </div>
             </div>
         </section>
         <!-- btn-section -->
         <section class=" bg-transparent flex justify-center gap-4 mx-auto pt-10 pb-8  ">
-            <button class="text-xl font-semibold px-8 py-4  bg-btn-color rounded-md border border-gray-300">Donation</button>
-            <button class="text-xl font-semibold px-8 py-4 bg-secondary-bg rounded-md border border-gray-300">History</button>
+            <button id="donationBtn" class="text-xl font-semibold px-8 py-4  bg-btn-color rounded-md border border-gray-300">Donation</button>
+            <button id="historyBtn" class="text-xl font-semibold px-8 py-4 bg-white rounded-md border border-gray-300">History</button>
         </section>
     </header>
 
     <!-- Main Section  -->
     <main class="bg-primary-bg">
-        <section class="pb-36">
+        <!-- Donation Section  -->
+         
+        <section id="donation" class="pb-36 hidden">
             <div class="bg-white px-4">
                 <div class="container mx-auto max-w-[1140px] grid gap-8 pb-20">
                     <!-- first card  -->
@@ -83,57 +85,72 @@
                         <div class="col-span-1 flex flex-col gap-4">
                             <div class="flex gap-2 px-4 py-2 bg-secondary-bg max-w-fit rounded-lg">
                                 <img src="./assets/coin.png" class="h-6 w-6" alt="Coin">
-                                <h2 class="text-xl"><span>5000</span> BDT</h2>
+                                <h2 class="text-xl"><span id="balanceNoakhali">5000</span> BDT</h2>
                             </div>
                             <h2 class="font-semibold text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
                             <p class="text-secondary-text"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                            <input class="p-4 border font-light  border-gray-200 rounded-lg " type="text" placeholder="Write Donation Amount">
-                            <div class="text-center"><button class="text-xl font-semibold px-8 py-4 bg-btn-color rounded-md border border-gray-300">Donate Now</button></div>
+                            <input id="donationAmountNoakhali" class="p-4 border font-light  border-gray-200 rounded-lg " type="text" placeholder="Write Donation Amount">
+                            <div class="text-center"><button id="donateBtnNoakhali" class="text-xl font-semibold px-8 py-4 bg-btn-color rounded-md border border-gray-300">Donate Now</button></div>
                         </div>
                     </div>
                     <!-- Second card  -->
                     <div class="grid grid-cols-1  lg:grid-cols-2 justify-evenly   gap-8 p-8 rounded-lg border border-gray-400">
                         <!-- left img -->
                         <div class="col-span-1 ">
-                            <img class="w-full" src="./assets/noakhali.png" alt="">
+                            <img class="w-full" src="./assets/feni.png" alt="">
                         </div>
                         <!-- right side  -->
                         <div class="col-span-1 flex flex-col gap-4">
                             <div class="flex gap-2 px-4 py-2 bg-secondary-bg max-w-fit rounded-lg">
                                 <img src="./assets/coin.png" class="h-6 w-6" alt="Coin">
-                                <h2 class="text-xl"><span>6000</span> BDT</h2>
+                                <h2 class="text-xl"><span id="balanceFeni">6000</span> BDT</h2>
                             </div>
                             <h2 class="font-semibold text-xl">Donate for Flood Relief in Feni,Bangladesh</h2>
                             <p class="text-secondary-text"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                            <input class="p-4 border font-light  border-gray-200 rounded-lg " type="text" placeholder="Write Donation Amount">
-                            <div class="text-center"><button class="text-xl font-semibold px-8 py-4 bg-btn-color rounded-md border border-gray-300">Donate Now</button></div>
+                            <input id="donationAmountFeni" class="p-4 border font-light  border-gray-200 rounded-lg " type="text" placeholder="Write Donation Amount">
+                            <div class="text-center"><button  id="donateBtnFeni" class="text-xl font-semibold px-8 py-4 bg-btn-color rounded-md border border-gray-300">Donate Now</button></div>
                         </div>
                     </div>
                     <!-- third card  -->
                     <div class="grid grid-cols-1  lg:grid-cols-2 justify-evenly   gap-8 p-8 rounded-lg border border-gray-400">
                         <!-- left img -->
                         <div class="col-span-1 ">
-                            <img class="w-full" src="./assets/noakhali.png" alt="">
+                            <img class="w-full" src="./assets/quota-protest.png" alt="">
                         </div>
                         <!-- right side  -->
                         <div class="col-span-1 flex flex-col gap-4">
                             <div class="flex gap-2 px-4 py-2 bg-secondary-bg max-w-fit rounded-lg">
                                 <img src="./assets/coin.png" class="h-6 w-6" alt="Coin">
-                                <h2 class="text-xl"><span>7000</span> BDT</h2>
+                                <h2 class="text-xl"><span id="balanceMovement">7000</span> BDT</h2>
                             </div>
                             <h2 class="font-semibold text-xl">Aid for Injured in the Quota Movement</h2>
                             <p class="text-secondary-text"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                            <input class="p-4 border font-light  border-gray-200 rounded-lg " type="text" placeholder="Write Donation Amount">
-                            <div class="text-center"><button class="text-xl font-semibold px-8 py-4 bg-btn-color rounded-md border border-gray-300">Donate Now</button></div>
+                            <input id="donationAmountMovement" class="p-4 border font-light  border-gray-200 rounded-lg " type="text" placeholder="Write Donation Amount">
+                            <div class="text-center"><button id="donateBtnMovement" class="text-xl font-semibold px-8 py-4 bg-btn-color rounded-md border border-gray-300">Donate Now</button></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- History Section  -->
+         <section id="history" class=""> 
+            <div class="bg-white px-4">
+                <div id="historyContainer" class="container mx-auto max-w-[1140px] grid gap-8 pb-20">
+                    <!-- Children: history div  -->
+                    
+                </div>
+            </div>
+         </section>
+         <!-- Empty Section  -->
+         <!-- <div class="h-36 bg-primary-bg absolute bottom-0 left-0 right-0"></div> -->
     </main>
 
     <!-- Footer Section  -->
     <footer></footer>
     
+    <!-- scrip  -->
+     <script src="./js/function.js"></script>
+     <script src="./js/main.js"></script>
 </body>
 </html>
