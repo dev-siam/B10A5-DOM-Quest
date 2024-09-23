@@ -31,7 +31,11 @@ function donateNow(currentBalanceID, donationAmountID, myBalanceID) {
   );
   const myBalance = parseFloat(document.getElementById(myBalanceID).innerText);
 
-  if (!isNaN(donationAmount) && donationAmount > 0) {
+  if (
+    !isNaN(donationAmount) &&
+    donationAmount > 0 &&
+    donationAmount <= myBalance
+  ) {
     const updatedCurrentBalance = currentBalance + donationAmount;
     const updatedMyBalance = myBalance - donationAmount;
 

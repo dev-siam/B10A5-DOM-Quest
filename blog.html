@@ -45,7 +45,7 @@
   </head>
 <body class="font-lexend text-primary-text">
     <!-- Header Section  -->
-    <header class="sticky top-0   backdrop-blur-lg scroll-opacity-25">
+    <header class="sticky top-0   backdrop-blur-lg scroll-opacity-25 z-10">
         <section class="bg-primary-bg scroll-opacity-25  px-4 ">
             <div class="container mx-auto max-w-[1140px]">
             <div class="flex  gap-3 justify-between py-6 pb-10 ">
@@ -66,11 +66,47 @@
 
     <!-- Main Section  -->
     <main class="bg-primary-bg">
-    
+        
         <section id="donation" class="">
             <div class="bg-white px-4">
-                <div class="container mx-auto max-w-[1140px]">
-                    
+                <div class="container mx-auto max-w-[1140px] py-8 grid gap-5">
+                    <!-- Important FAQ -->
+                     <div>
+                        <h2 class="text-3xl font-bold">Important FAQ <i class="fa-regular fa-comment-dots text-4xl"></i></h2>
+                        
+                     </div>
+                     
+                    <!-- Accordian From DaisyUI  -->
+                     <div class="join join-vertical w-full">
+                        <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                            <input type="radio" name="my-accordion-4" checked="checked" />
+                            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                            <div class="collapse-content">
+                            <p>The Document Object Model (DOM) is a programming interface that represents an HTML document as a tree structure. It provides a way for JavaScript to interact with the HTML elements on a web page, allowing you to modify their content, styles, and attributes.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                            <input type="radio" name="my-accordion-4" />
+                            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                            <div class="collapse-content">
+                            <p>Here are the common methods to select elements from the DOM in JavaScript:getElementById, getElementsByClassName, getElementsByTagName, querySelector, querySelectorAll etc.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                            <input type="radio" name="my-accordion-4" />
+                            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                            <div class="collapse-content">
+                            <p>Event delegation is a technique in JavaScript where you attach an event listener to a parent element instead of individual child elements. When an event occurs on any of the child elements, the event bubbles up to the parent, triggering the attached event listener.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                            <input type="radio" name="my-accordion-4" />
+                            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                            <div class="collapse-content">
+                            <p>To manipulate an element's attributes and styles using the DOM, I can use JavaScript's setAttribute, getAttribute, and style properties.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
