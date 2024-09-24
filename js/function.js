@@ -21,8 +21,43 @@ function createHistory(donationAmount, donationAmountID) {
 
 
 
+// Commmon Function for Show Modal
+function showModal() {
+  const modalTemplate = `
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box flex flex-col justify-center items-center gap-4">
+                <h2 class="text-5xl font-extrabold">Congrates!</h2>
+                <img src="./assets/coin.png" class="h-20  py-2" alt="Coin" />
+                <p class="text-xl text-secondary-text">You Have Donated for Humankind</p>
+                <p class="text-2xl font-bold">Succesfully</p>
+                <div class="modal-action flex justify-center">
+                    <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close Confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        `;
+
+  const dialogElement = document.createElement("div");
+  dialogElement.innerHTML = modalTemplate;
+  document.body.appendChild(dialogElement);
+
+  dialogElement.querySelector("#my_modal_5").showModal();
+}
+
+// for Checking Amount data type
+
+
 // Common function for Donate Button Click
 function donateNow(currentBalanceID, donationAmountID, myBalanceID) {
+  // extra check for donation amount
+  if (isNaN(document.getElementById(donationAmountID).value)) {
+    alert("Please enter only number");
+    return;
+  }
+
   const currentBalance = parseFloat(
     document.getElementById(currentBalanceID).innerText
   );
@@ -42,7 +77,8 @@ function donateNow(currentBalanceID, donationAmountID, myBalanceID) {
     document.getElementById(currentBalanceID).innerText = updatedCurrentBalance;
     document.getElementById(donationAmountID).value = "";
     document.getElementById(myBalanceID).innerText = updatedMyBalance;
-    alert(`You Have Donated TK. ${donationAmount}`);
+    // alert(`You Have Donated TK. ${donationAmount}`);
+    showModal();
   } else {
     alert("Please enter a valid donation amount.");
     return;
@@ -72,3 +108,4 @@ function toggleBtnColor(showElementID, hideElementID) {
   hideElement.classList.remove("bg-btn-color");
   
 }
+
